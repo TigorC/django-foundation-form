@@ -1,0 +1,10 @@
+*.pyc
+.idea/*
+*.log
+*.swp
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.ropeproject/
+.tox/
+foundationform.egg-info
