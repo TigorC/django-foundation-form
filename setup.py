@@ -11,7 +11,7 @@ setup(
     url='http://github.com/TigorC/django-foundation-form',
     license='See LICENSE.txt',
     description='Reusable Django app for display zurb foundation forms',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     classifiers=[
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
