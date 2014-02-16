@@ -14,18 +14,16 @@
     {{ formset.management_form }}
 
     {% for item_form in formset %}
-        <fieldset>
-            <div class="formset-form">
-                <div class="large-11 columns">
-                    {% include 'foundationform/foundation_form.html' with form=item_form %}
-                </div>
-                <div class="large-1 columns">
-                    {% if formset.can_delete %}
-                        <a href="#" class="close formset-delete-form">&times;</a>
-                    {% endif %}
-                </div>
+        <div class="formset-form">
+            <div class="large-11 columns">
+                {% include 'foundationform/foundation_form.html' with form=item_form %}
             </div>
-        </fieldset>
+            <div class="large-1 columns">
+                {% if formset.can_delete %}
+                    <a href="#" class="close formset-delete-form">&times;</a>
+                {% endif %}
+            </div>
+        </div>
     {% endfor %}
     <a href="#" class="button secondary small formset-add-form">Add item</a>
 </div>
