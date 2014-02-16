@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import django
 from django.conf import settings
 from django.core.management import call_command
 
@@ -15,4 +16,7 @@ if not settings.configured:
     )
 
 if __name__ == "__main__":
-    call_command('test', 'foundationform')
+    if django.VERSION[1] > 5:
+        call_command('test', 'foundationform.tests')
+    else:
+        call_command('test', 'foundationform')
