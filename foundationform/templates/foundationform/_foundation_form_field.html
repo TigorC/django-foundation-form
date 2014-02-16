@@ -8,17 +8,17 @@
         <div class="large-9 columns">
             {{ field }}
             {% for error in field.errors %}
-                <small>{{ error|escape }}</small>
+                <small{% if field.errors %} class="error"{% endif %}>{{ error|escape }}</small>
             {% endfor %}
         </div>
     {% else %}
         <div class="large-12 columns">
-            <label for="{{ field.auto_id }}">
+            <label>
                 {{ field.label }}
+                {{ field }}
             </label>
-            {{ field }}
             {% for error in field.errors %}
-                <small>{{ error|escape }}</small>
+                <small{% if field.errors %} class="error"{% endif %}>{{ error|escape }}</small>
             {% endfor %}
         </div>
     {% endif %}
